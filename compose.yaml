@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: codein
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+      # - ./media-data:/app/media-data
+      # - ./db:/app/db
+      # - ./backups:/app/backups
